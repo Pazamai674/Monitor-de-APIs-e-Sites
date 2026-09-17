@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de APIs em Tempo Real</title>
+    <!-- Tailwind CSS para estilização rápida -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Cliente JS do SignalR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6 flex items-center gap-2">
+            📡 Monitor de Disponibilidade (Uptime)
+        </h1>
+
+        <!-- Cards de Status -->
+        <div id="sitesGrid" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <!-- Gerado via JavaScript -->
+        </div>
+
+        <!-- Gráfico de Latência -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-semibold mb-4">Latência em Tempo Real (ms)</h2>
+            <canvas id="latenciaChart" height="100"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
